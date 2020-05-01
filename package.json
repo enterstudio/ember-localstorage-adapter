@@ -9,7 +9,9 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "ember try:testall",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "",
   "engines": {
@@ -58,9 +60,11 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
-    "ember-runtime-enumerable-includes-polyfill": "^1.0.1"
+    "ember-runtime-enumerable-includes-polyfill": "^1.0.1",
+    "snyk": "^1.316.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "snyk": true
 }
